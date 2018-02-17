@@ -176,7 +176,7 @@ iframe{
   position: relative;
   top: 32px;
   left: 50px;
-  width: 18em;
+  width: 100%;
   z-index: 1;
 
   -webkit-user-select: none;
