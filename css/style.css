@@ -9,7 +9,7 @@
   z-index: 4;
   height:13%;
   width:auto;
-  margin-left:40%;
+  margin-left:42%;
 }
 #texte1{
   width: 80%;
@@ -273,17 +273,18 @@ iframe{
 
 #menu li
 {
-  height: 65px;
+  height: 66px;
   font-size: 26px;
   margin-bottom: :10px;
   border-bottom: solid 1px #192a56;
+  width: 100%;
 }
 
 #menuToggle input:checked ~ ul
 {
   transform: none;
 }
-@media only screen and (min-device-width : 0px) and (max-device-width : 760px) {
+@media only screen and (min-device-width : 0px) and (max-device-width : 600px) {
   #menuweb{
     display: none;
     }
@@ -329,16 +330,20 @@ iframe{
     flex-direction: column;
     margin-bottom: 0.5em;
     margin-left: 0;
+    font-size: 10%;
   }
 header{
   display:block;
 }
 ul#menu{
   width: 100%;
-  height: 250px;
+  height: 260px;
+}
+#logomobile{
+  height:5em;
 }
 }
-@media only screen and (min-device-width : 760px) and (max-device-width : 1281px) {
+@media only screen and (min-device-width : 500px) and (max-device-width : 1281px) {
   #blocdeblock{
     display: flex;
     flex-flow: row wrap;
@@ -361,16 +366,13 @@ ul#menu{
     z-index: 6;
   }
   #logomobile{
-    position: absolute;
-    z-index: 4;
-    height:11%;
-    width:auto;
-    margin-left:40%;
+    height:5em;
   }
   .row{
     display: flex;
     flex-direction: column;
     margin-bottom: 0.5em;
     margin-left: 0;
+    font-size: 80%;
   }
-bil
+}
