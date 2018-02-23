@@ -7,7 +7,7 @@
 #logomobile{
   position: absolute;
   z-index: 4;
-  height:15%;
+  height:13%;
   width:auto;
   margin-left:40%;
 }
@@ -337,3 +337,40 @@ ul#menu{
   width: 100%;
   height: 250px;
 }
+}
+@media only screen and (min-device-width : 760px) and (max-device-width : 1281px) {
+  #blocdeblock{
+    display: flex;
+    flex-flow: row wrap;
+  }
+  #menuweb{
+    display: none;
+    }
+  .imgblock{
+    width: 69%;
+  }
+  .block{
+    width: 40%;
+  }
+  #menumobile{
+    display: block;
+    background-color: #050d18;
+    height:5em;
+    color:white;
+    border-bottom: solid 0.5px black;
+    z-index: 6;
+  }
+  #logomobile{
+    position: absolute;
+    z-index: 4;
+    height:11%;
+    width:auto;
+    margin-left:40%;
+  }
+  .row{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+    margin-left: 0;
+  }
+bil
