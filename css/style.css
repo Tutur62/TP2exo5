@@ -1,6 +1,16 @@
 *{
   font-family: 'PT Sans', sans-serif;
 }
+#zonedetexte{
+  margin-left: 0.2em;
+}
+#logomobile{
+  position: absolute;
+  z-index: 4;
+  height:15%;
+  width:auto;
+  margin-left:45%;
+}
 #texte1{
   width: 80%;
   margin: auto;
@@ -200,9 +210,6 @@ iframe{
   -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
 #menuToggle span
 {
   display: block;
@@ -232,39 +239,21 @@ iframe{
 {
   transform-origin: 0% 100%;
 }
-
-/*
- * Transform all the slices of hamburger
- * into a crossmark.
- */
 #menuToggle input:checked ~ span
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
-
-/*
- * But let's hide the middle one.
- */
 #menuToggle input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
-
-/*
- * Ohyeah and the last one should go the other direction
- */
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
 #menu
 {
   position: absolute;
@@ -285,8 +274,10 @@ iframe{
 
 #menu li
 {
-  font-size: 22px;
-  padding-bottom: :2em;
+  height: 65px;
+  font-size: 26px;
+  margin-bottom: :10px;
+  border-bottom: solid 1px #192a56;
 }
 
 /*
@@ -306,6 +297,8 @@ iframe{
     background-color: #050d18;
     height:5em;
     color:white;
+    border-bottom: solid 0.5px black;
+    z-index: 6;
   }
   #blocdeblock {
     display: flex;
@@ -343,4 +336,5 @@ header{
 }
 ul#menu{
   width: 100%;
+  height: 200px;
 }
