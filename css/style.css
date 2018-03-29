@@ -1,6 +1,16 @@
 *{
   font-family: 'PT Sans', sans-serif;
 }
+#zonedetexte{
+  margin-left: 0.2em;
+}
+#logomobile{
+  position: absolute;
+  z-index: 4;
+  height:13%;
+  width:auto;
+  margin-left:42%;
+}
 #texte1{
   width: 80%;
   margin: auto;
@@ -176,7 +186,7 @@ iframe{
   position: relative;
   top: 32px;
   left: 50px;
-  width: 18em;
+  width: 12em;
   z-index: 1;
 
   -webkit-user-select: none;
@@ -194,15 +204,12 @@ iframe{
 
   cursor: pointer;
 
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  opacity: 0;
+  z-index: 2;
 
   -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
 #menuToggle span
 {
   display: block;
@@ -232,39 +239,21 @@ iframe{
 {
   transform-origin: 0% 100%;
 }
-
-/*
- * Transform all the slices of hamburger
- * into a crossmark.
- */
 #menuToggle input:checked ~ span
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
-
-/*
- * But let's hide the middle one.
- */
 #menuToggle input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
-
-/*
- * Ohyeah and the last one should go the other direction
- */
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
 #menu
 {
   position: absolute;
@@ -275,7 +264,6 @@ iframe{
   background-color: #050d18;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
 
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
@@ -285,27 +273,31 @@ iframe{
 
 #menu li
 {
-  font-size: 22px;
-  padding-bottom: :2em;
+  height: 66px;
+  font-size: 26px;
+  margin-bottom: :10px;
+  border-bottom: solid 1px #192a56;
+  width: 100%;
 }
 
-/*
- * And let's slide it in from the left
- */
 #menuToggle input:checked ~ ul
 {
   transform: none;
 }
-@media only screen and (min-device-width : 0px) and (max-device-width : 760px) {
-
+@media only screen and (min-device-width : 0px) and (max-device-width : 600px) {
   #menuweb{
     display: none;
     }
+  .imgblock{
+    width: 69%;
+  }
   #menumobile{
     display: block;
     background-color: #050d18;
     height:5em;
     color:white;
+    border-bottom: solid 0.5px black;
+    z-index: 6;
   }
   #blocdeblock {
     display: flex;
@@ -316,8 +308,9 @@ iframe{
   .block{
     width: 100%;
     margin:0;
-    border-collapse: collapse;
-    border:none;
+    border: none;
+    border-bottom: #cdcdcd 1.5px solid;
+    box-shadow: none;
   }
   #deuxiemeblock{
     display: flex;
@@ -337,10 +330,49 @@ iframe{
     flex-direction: column;
     margin-bottom: 0.5em;
     margin-left: 0;
+    font-size: 80%;
   }
 header{
   display:block;
 }
 ul#menu{
   width: 100%;
+  height: 260px;
+}
+#logomobile{
+  height:5em;
+}
+}
+@media only screen and (min-device-width : 500px) and (max-device-width : 1281px) {
+  #blocdeblock{
+    display: flex;
+    flex-flow: row wrap;
+  }
+  #menuweb{
+    display: none;
+    }
+  .imgblock{
+    width: 69%;
+  }
+  .block{
+    width: 40%;
+  }
+  #menumobile{
+    display: block;
+    background-color: #050d18;
+    height:5em;
+    color:white;
+    border-bottom: solid 0.5px black;
+    z-index: 6;
+  }
+  #logomobile{
+    height:5em;
+  }
+  .row{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+    margin-left: 0;
+    font-size: 80%;
+  }
 }
